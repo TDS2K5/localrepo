@@ -10,15 +10,15 @@ for s in range(l):
 
 n=len(arr)
 
-# for i in range(n-1):
-#     mindex=i
-#     for j in range(i+1,n):
-#         if arr[j]<arr[mindex]:
-#             mindex=j
+for i in range(n-1):
+    mindex=i
+    for j in range(i+1,n):
+        if arr[j]<arr[mindex]:
+            mindex=j
     
-#     arr[i],arr[mindex]=arr[mindex],arr[i]
+    arr[i],arr[mindex]=arr[mindex],arr[i]
 
-# print(arr)
+print(arr)
 
 
 
