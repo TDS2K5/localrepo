@@ -1,7 +1,9 @@
-# #1
-# a=10
-# b=20
-# print(int(a+b))
+#1
+a=10
+b=20
+c="hello"
+print(c)
+print(int(a+b))
 
 # #2
 # n1=int(input("n1: "))
@@ -28,6 +30,7 @@
 # print(a12)
 
 #square of two nos
-a1=int(input("a1: "))
-a12=a1*a1
-print(a12)
+# a1=int(input("a1: "))
+# a12=a1*a1
+# print(a12)
+# "hello"
