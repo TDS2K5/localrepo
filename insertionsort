@@ -1,0 +1,11 @@
+from array import *
+
+def ins(a,n):
+    for i in range(n-1):
+
+n=int(input("enter length of array : "))
+a=array('i',[])
+for i in range(n):
+    a.append(int(input(f"enter array element {i} : ")))
+print(a)
+print(ins(a,n))
