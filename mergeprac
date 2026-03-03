@@ -1,0 +1,50 @@
+from array import *
+
+def mergesort(A):
+    if len(A)>1:
+        mid=len(A)//2
+        B=A[:mid]
+        C=A[mid:]
+
+        mergesort(B)
+        mergesort(C)
+        merge(B,C,A)
+
+    return A
+
+def merge(B,C,A):
+    i=j=k=0
+    p=len(B)
+    q=len(C)
+
+    while i<p and j<q:
+        if B[i]<C[j]:
+            A[k]=B[i]
+            i+=1
+        else:
+            A[k]=C[j]
+            j+=1
+
+        k+=1
+
+    while i<p:
+        A[k]=B[i]
+        i+=1
+        k+=1
+    while j<q:
+        A[k]=C[j]
+        j+=1
+        k+=1
+
+        
+        
+
+n=int(input("enter no of elements: "))
+A=array('i',[])
+for i in range(n):
+    A.append(int(input(f"enter array element {i}:  ")))
+
+print("array before sorting: ",A)
+bkd=mergesort(A)
+bkc=mergesort(A)
+print("array after sorting: ",bkc)

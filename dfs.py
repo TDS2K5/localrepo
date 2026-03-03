@@ -5,17 +5,19 @@ graph={
     'B':['D','E'],
     'C':['F'],
     'D':[],
-    'E':['F'],
+    'E':['F','G'],
     'F':[],
     'G':[],
 }
+
 visited=set()
 
 def dfs(visited,graph,node):
-    
     if node not in visited:
         print(node)
         visited.add(node)
+        for neigbour in graph[node]:
+            dfs(visited,graph,neigbour)
 
-        for neighbour in graph[node]:
-            dfs(visited,graph,node)
+
+dfs(visited,graph,'A')
